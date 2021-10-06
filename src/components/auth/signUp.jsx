@@ -61,7 +61,7 @@ function Signup (){
 
     const sendSignUpData = async ()=>{
         try{
-            const res = await Axios.post('http://localhost:3001/auth/signup',{
+            const res = await Axios.post('https://p7-backend-cvg.herokuapp.com/auth/signup',{
             name: name,
             email: email,
             password: password
@@ -71,7 +71,7 @@ function Signup (){
                 localStorage.setItem('id', JSON.stringify(value));
             }
             setStorage(res.data.userId);
-            window.location = 'http://localhost:3000/forum';
+            window.location = 'https://p7-backend-cvg.herokuapp.com/forum';
         }catch(err){
             console.log(err)
         }

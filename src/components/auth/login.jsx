@@ -26,7 +26,7 @@ function Login (){
 
     const sendLoginData = async ()=>{
         try{
-            const res = await Axios.post('http://localhost:3001/auth/login',{
+            const res = await Axios.post('https://p7-backend-cvg.herokuapp.com/auth/login',{
             email: email,
             password: password
             });
