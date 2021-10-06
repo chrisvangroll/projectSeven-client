@@ -12,13 +12,13 @@ function Account (){
 
     const deleteUser = async () =>{
         try{
-            const res = await Axios.delete('http://localhost:3001/auth/delete',{
+            const res = await Axios.delete('https://p7-backend-cvg.herokuapp.com/auth/delete',{
             data:{
                 userId : getStorage()
             }
             });
             console.log(res)
-            window.location = 'http://localhost:3000/signup'
+            window.location = 'signup'
         }catch(err){
             console.log(err)
         }

@@ -19,7 +19,7 @@ function CommentLikes (props) {
 
     const getLikes = async ()=>{
         try{
-            const res = await Axios.get('http://localhost:3001/comment/' + props.commentId2 + '/upvote/');
+            const res = await Axios.get('https://p7-backend-cvg.herokuapp.com/comment/' + props.commentId2 + '/upvote/');
             setCommentLikes(res.data.length); 
             setCommentLikers(res.data)
         }catch(err){
@@ -29,7 +29,7 @@ function CommentLikes (props) {
   
     const sendLike = async ()=>{
         try{
-        const res = await Axios.post('http://localhost:3001/comment/upvote',{
+        const res = await Axios.post('https://p7-backend-cvg.herokuapp.com/comment/upvote',{
             userId : getStorage(),
             commentId: props.commentId2 
         }

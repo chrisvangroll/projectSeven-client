@@ -5,7 +5,7 @@ export default function DeleteComment(props) {
 //console.log('here' + props.commentId4)
       const deleteComment = async () =>{
         try{
-            const res = await Axios.delete('http://localhost:3001/comment/' + props.commentId4 +'/remove/');
+            const res = await Axios.delete('https://p7-backend-cvg.herokuapp.com/comment/' + props.commentId4 +'/remove/');
             console.log(res.data);
             props.getComments1();
         }catch(err){

@@ -17,7 +17,7 @@
  
 //     const sendComment = async ()=>{
 //         try{
-//             const res = await Axios.post('http://localhost:3001/comment',{
+//             const res = await Axios.post('http:///comment',{
 //             userId: getStorage(),
 //             uploadId: props.uploadId2,
 //             content : comment

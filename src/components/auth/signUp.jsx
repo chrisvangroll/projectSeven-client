@@ -71,7 +71,7 @@ function Signup (){
                 localStorage.setItem('id', JSON.stringify(value));
             }
             setStorage(res.data.userId);
-            window.location = 'https://p7-backend-cvg.herokuapp.com/forum';
+            window.location = 'forum';
         }catch(err){
             console.log(err)
         }

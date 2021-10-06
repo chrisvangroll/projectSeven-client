@@ -27,7 +27,7 @@ function Forum (){
     const getAdmin = async () =>{
         
         try{
-            const res = await Axios.get('http://localhost:3001/forum/admin');
+            const res = await Axios.get('https://p7-backend-cvg.herokuapp.com/forum/admin');
             //console.log(res.data[0].adminId); 
             setStorage(res.data[0].adminId);
             
@@ -43,7 +43,7 @@ function Forum (){
         }
         //console.log(config.headers.authorization)
         try{
-            const res = await Axios.get('http://localhost:3001/forum', config 
+            const res = await Axios.get('https://p7-backend-cvg.herokuapp.com/forum', config 
                 // headers : {
                 //     authorization: JSON.parse(localStorage.getItem('token')) 
                 // } 

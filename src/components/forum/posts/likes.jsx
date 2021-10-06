@@ -24,7 +24,7 @@ function Likes (props) {
             } 
         }
         try{
-            const res = await Axios.get('http://localhost:3001/forum/likes/' + props.uploadId4, config);
+            const res = await Axios.get('https://p7-backend-cvg.herokuapp.com/forum/likes/' + props.uploadId4, config);
             setLikes(res.data.length); 
             setLikeNames(res.data);
             
@@ -40,7 +40,7 @@ function Likes (props) {
             } 
         }
         try{
-        const res = await Axios.post('http://localhost:3001/forum/likes', {
+        const res = await Axios.post('https://p7-backend-cvg.herokuapp.com/forum/likes', {
             userId : getStorage(),
             uploadId: props.uploadId4 
         }

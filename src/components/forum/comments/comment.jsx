@@ -41,7 +41,7 @@ function Comment (props) {
     const updateComment = async ()=>{
         
         try{
-            const res = await Axios.put('http://localhost:3001/comment/', {
+            const res = await Axios.put('https://p7-backend-cvg.herokuapp.com/comment/', {
                 id: props.commentId,
                 comment: commentEdit
             })

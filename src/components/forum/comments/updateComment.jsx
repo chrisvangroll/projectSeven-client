@@ -12,10 +12,10 @@ export default function UpdateComment(props) {
     // const updatePost = async ()=>{
         
     //     try{
-    //         const res = await Axios.put('http://localhost:3001/forum/' + post[0].id, formData)
+    //         const res = await Axios.put('http://forum/' + post[0].id, formData)
     //         console.log(res);
     //         console.log('updated successfully');
-    //         window.location = 'http://localhost:3000/forum';
+    //         window.locatio
     //     }catch(err){
     //         console.log(err)
     //     }

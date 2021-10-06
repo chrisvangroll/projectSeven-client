@@ -14,7 +14,7 @@ function Comments (props) {
 //console.log(comments)
     const getComments = async ()=>{
         try{
-            const res = await Axios.get('http://localhost:3001/comment/' + props.uploadId3);
+            const res = await Axios.get('https://p7-backend-cvg.herokuapp.com/comment/' + props.uploadId3);
             setComments(res.data); 
             //console.log(res.data);
             
@@ -42,7 +42,7 @@ function Comments (props) {
 
     const sendComment = async ()=>{
         try{
-            const res = await Axios.post('http://localhost:3001/comment',{
+            const res = await Axios.post('https://p7-backend-cvg.herokuapp.com/comment',{
             userId: getStorage(),
             uploadId: props.uploadId3,
             content : comment

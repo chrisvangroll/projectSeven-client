@@ -32,7 +32,7 @@ function Modify (props) {
             } 
         }
         try{
-            const res = await Axios.get('http://localhost:3001/forum/' + uploadId + '/post');
+            const res = await Axios.get('https://p7-backend-cvg.herokuapp.com/forum/' + uploadId + '/post');
             setPost(res.data);
             setImageUrl(res.data[0].content);
             //setImageUrl(post[0].content);
@@ -50,9 +50,9 @@ function Modify (props) {
 
     const deletePost = async () =>{
         try{
-            const res = await Axios.delete('http://localhost:3001/forum/' + post[0].id);
+            const res = await Axios.delete('https://p7-backend-cvg.herokuapp.com/forum/' + post[0].id);
             console.log(res)
-            window.location = 'http://localhost:3000/forum'
+            window.location = 'forum'
         }catch(err){
             console.log(err)
         }
@@ -71,10 +71,10 @@ function Modify (props) {
         //     }
         // }
         try{
-            const res = await Axios.put('http://localhost:3001/forum/' + post[0].id, formData)
+            const res = await Axios.put('https://p7-backend-cvg.herokuapp.com/forum/' + post[0].id, formData)
             console.log(res);
             console.log('updated successfully');
-            window.location = 'http://localhost:3000/forum';
+            window.location = 'forum';
         }catch(err){
             console.log(err)
         }

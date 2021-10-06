@@ -32,9 +32,9 @@ function MakePost (props) {
                     Authorization: JSON.parse(localStorage.getItem('token')) 
                 } 
             }
-            const res = await Axios.post('http://localhost:3001/forum', formData)
+            const res = await Axios.post('https://p7-backend-cvg.herokuapp.com/forum', formData)
             console.log(res);
-            window.location = 'http://localhost:3000/forum';
+            window.location = '/forum';
         }catch(err){
             console.log(err)
         }

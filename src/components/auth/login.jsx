@@ -44,7 +44,7 @@ function Login (){
                     localStorage.setItem('token', JSON.stringify(token));
                 }
                 setStorage(res.data.userId, res.data.token);
-                window.location = 'http://localhost:3000/forum'
+                window.location = 'forum'
               }
         }catch(err){
             console.log(err)
