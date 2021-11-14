@@ -34,7 +34,7 @@ function MakePost (props) {
             }
             const res = await Axios.post('https://p7-backend-cvg.herokuapp.com/forum', formData)
             console.log(res);
-            window.location = '/forum';
+            window.location = 'forum';
         }catch(err){
             console.log(err)
         }

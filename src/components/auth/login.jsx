@@ -1,11 +1,12 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
+import { DataContext } from '../../dataContext';
 import Axios from 'axios';
 import {Link } from 'react-router-dom';
 import Logo from '../../images/icon-left-font-monochrome-black.webp'
 
 
 function Login (){
-
+    const value = useContext(DataContext)
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState('');
@@ -54,6 +55,7 @@ function Login (){
 
     return(
         <div class='container authContainer d-flex justify-content-center align-items-center'>
+            <div>{value}</div>
             <div class='registrationWrapper'>
                 <img class='authLogo' src={Logo} alt="Groupomania" />
                 <h1 class='text-center fs-2 mb-3'>Welcome Back</h1>
