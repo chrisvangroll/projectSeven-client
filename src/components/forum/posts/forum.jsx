@@ -28,7 +28,6 @@ function Forum (){
                 {/* <Comments uploadId3 = {props.uploadId}/> */}
                 {/* <MakeComment uploadId2= {props.uploadId}/> */}
             </div>
-                // <Post title={post.title} content={post.content} author={post.author} name={post.name} uploadId={post.id}/>
             ))}</main> 
 
              {/* <button onClick= {getPosts}>click for data</button>
