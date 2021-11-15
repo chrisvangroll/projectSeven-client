@@ -9,12 +9,12 @@ export const DataProvider = (props) => {
         // getAdmin();
     }, []);
     
-    const [posts, setPosts] = useState([]);
+    const [posts, setPosts] = useState();
 
-    function setStorage(value){
-        localStorage.setItem('admin', JSON.stringify(value));
-    }
-   ;
+//     function setStorage(value){
+//         localStorage.setItem('admin', JSON.stringify(value));
+//     }
+//    ;
     // const getAdmin = async () =>{
         
     //     try{
@@ -34,7 +34,10 @@ export const DataProvider = (props) => {
         try{
             const res = await Axios.get('https://p7-backend-cvg.herokuapp.com/forum', config 
             );
-            setPosts(res.data.reverse());   
+           
+            setPosts(res.data.reverse()); 
+           // console.log(res.data.reverse()); 
+             
             
         }catch(err){
             console.log(err);
